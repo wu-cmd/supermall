@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+vue.config.productionTip = false
 // 1、安装插件
 Vue.use(VueRouter)
 //2、创建router 
