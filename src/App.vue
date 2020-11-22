@@ -1,33 +1,36 @@
 <template>
   <div id="app">
+     <router-view></router-view>
    <TabBer>
-     <Tabbaritem></Tabbaritem>
-     <Tabbaritem></Tabbaritem>
-     <Tabbaritem></Tabbaritem>
-     <Tabbaritem></Tabbaritem>
-     <!-- <div class="tab-bar-item">
-        <img src="/src/assets/img/Tabbar/sy1.png">
-        首页
-        </div>
-      <div class="tab-bar-item">
-        <img src="/src/assets/img/Tabbar/fl1.png">
-        分类
-        </div>
-      <div class="tab-bar-item">
-       <img src="/src/assets/img/Tabbar/gwc1.png">
-        购物车
-        </div>
-      <div class="tab-bar-item">
-       <img src="/src/assets/img/Tabbar/wd1.png">
-        我的
-        </div> -->
+      <Tabbaritem path="/home">
+       <img slot="item-icon" src="./assets/img/tabbar/sy1.png">
+       <img slot="item-icon2" src="./assets/img/tabbar/sy2.png">
+       <div slot="item-text"> 首页</div>
+      </Tabbaritem>
+     <Tabbaritem path="/category">
+         <img slot="item-icon" src="./assets/img/tabbar/fl1.png">
+          <img slot="item-icon2" src="./assets/img/tabbar/fl2.png">
+        <div slot="item-text"> 分类 </div>
+     </Tabbaritem>
+     <Tabbaritem path="/cart">
+        <img slot="item-icon" src="./assets/img/tabbar/gwc1.png">
+         <img slot="item-icon2" src="./assets/img/tabbar/gwc2.png">
+        <div slot="item-text"> 购物车 </div>
+        
+     </Tabbaritem>
+     <Tabbaritem path="/profile">
+       <img slot="item-icon" src="./assets/img/tabbar/wd1.png">
+        <img slot="item-icon2" src="./assets/img/tabbar/wd2.png">
+       <div slot="item-text"> 我的 </div>
+     </Tabbaritem>
    </TabBer>
+  
   </div>
 </template>
 
 <script>
-import TabBer from "./router/TabBar/TabBar"
-import Tabbaritem from "./router/TabBar/Tabbaritem"
+import TabBer from "./components/TabBar/TabBar"
+import Tabbaritem from "./components/TabBar/Tabbaritem"
 export default {
   name: 'App',
   components: {
@@ -39,15 +42,4 @@ export default {
 
 <style>
 @import 'assets/css/base.css';
-.tar-bar{
-  display: flex;
-  background-color: #f6f6f6;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  box-shadow: 0 -3px 1px rgba(100,100,100,0.1);
-}
-
 </style>
